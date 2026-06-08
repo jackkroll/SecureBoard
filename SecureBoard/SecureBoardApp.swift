@@ -10,9 +10,18 @@ import SwiftData
 
 @main
 struct SecureBoardApp: App {
-    var sharedModelContainer: ModelContainer = {
+    private let sharedModelContainer: ModelContainer
+    @StateObject private var pasteboardMonitor: PasteboardMonitor
+
+    init() {
+        let container = Self.makeModelContainer()
+        sharedModelContainer = container
+        _pasteboardMonitor = StateObject(wrappedValue: PasteboardMonitor(container: container))
+    }
+
+    private static func makeModelContainer() -> ModelContainer {
         let schema = Schema([
-            Item.self,
+            PasteboardItem.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -21,11 +30,12 @@ struct SecureBoardApp: App {
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
-    }()
+    }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(pasteboardMonitor)
         }
         .modelContainer(sharedModelContainer)
     }
