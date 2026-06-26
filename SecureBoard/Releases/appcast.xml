@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>SecureBoard</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Thu, 25 Jun 2026 18:12:10 -0400</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.5</sparkle:minimumSystemVersion>
+            <enclosure url="https://jackk.dev/projects/secureboard/SecureBoard-1.dmg" length="7020917" type="application/octet-stream" sparkle:edSignature="dSo/N+L2SmCMNKzsxnFowORarmP0STClqO1ITB6DwxSAwVgpOUEoj7wZDJOkvJOb8+zVEZWjINvV5x4gaOVXDw=="/>
+        </item>
+    </channel>
+</rss>

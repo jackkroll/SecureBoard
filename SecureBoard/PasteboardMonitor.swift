@@ -14,6 +14,7 @@ import SwiftData
 @MainActor
 class PasteboardMonitor: ObservableObject {
     private let container: ModelContainer
+    @Published private(set) var encryptionKey: SymmetricKey?
     private var pasteboard = NSPasteboard.general
     private var lastChangeCount: Int = 0
     private var timer: Timer?
@@ -25,6 +26,7 @@ class PasteboardMonitor: ObservableObject {
 
     init(container: ModelContainer, startsImmediately: Bool = true) {
         self.container = container
+        encryptionKey = keychain.getData(keychainStringKey).map(SymmetricKey.init(data:))
         lastChangeCount = pasteboard.changeCount
 
         if startsImmediately {
@@ -56,18 +58,20 @@ class PasteboardMonitor: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + captureDelay, execute: workItem)
     }
 
-    func fetchKey() -> SymmetricKey? {
-        keychain.getData(keychainStringKey).map(SymmetricKey.init(data:))
+    func rotateKey() {
+        keychain.delete(keychainStringKey)
+        let key = SymmetricKey(size: .bits256)
+        keychain.set(key.withUnsafeBytes { Data($0) }, forKey: keychainStringKey)
+        encryptionKey = key
     }
 
     private func existingOrNewKey() -> SymmetricKey {
-        if let key = fetchKey() {
+        if let key = encryptionKey {
             return key
         }
-
-        print("new key")
         let key = SymmetricKey(size: .bits256)
         keychain.set(key.withUnsafeBytes { Data($0) }, forKey: keychainStringKey)
+        encryptionKey = key
         return key
     }
 

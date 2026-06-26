@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56E421B12FEB3032006D3E4C /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 56E421B02FEB3032006D3E4C /* KeyboardShortcuts */; };
+		56E421D62FEDB672006D3E4C /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 56E421D52FEDB672006D3E4C /* Sparkle */; };
 		56EDFD1F2FD71D7D00B7EFF8 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56EDFD1E2FD71D7D00B7EFF8 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
@@ -14,9 +16,22 @@
 		56EDA2F02FD70A150046E632 /* SecureBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		56E422002FEDBC67006D3E4C /* Exceptions for "SecureBoard" folder in "SecureBoard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 56EDA2EF2FD70A150046E632 /* SecureBoard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		56EDA2F22FD70A150046E632 /* SecureBoard */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				56E422002FEDBC67006D3E4C /* Exceptions for "SecureBoard" folder in "SecureBoard" target */,
+			);
 			path = SecureBoard;
 			sourceTree = "<group>";
 		};
@@ -27,7 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E421D62FEDB672006D3E4C /* Sparkle in Frameworks */,
 				56EDFD1F2FD71D7D00B7EFF8 /* KeychainSwift in Frameworks */,
+				56E421B12FEB3032006D3E4C /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +88,8 @@
 			name = SecureBoard;
 			packageProductDependencies = (
 				56EDFD1E2FD71D7D00B7EFF8 /* KeychainSwift */,
+				56E421B02FEB3032006D3E4C /* KeyboardShortcuts */,
+				56E421D52FEDB672006D3E4C /* Sparkle */,
 			);
 			productName = SecureBoard;
 			productReference = 56EDA2F02FD70A150046E632 /* SecureBoard.app */;
@@ -102,6 +121,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				56EDFD1D2FD71D7D00B7EFF8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				56E421AF2FEB3032006D3E4C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				56E421D42FEDB672006D3E4C /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 56EDA2F12FD70A150046E632 /* Products */;
@@ -265,15 +286,33 @@
 				DEVELOPMENT_TEAM = ZS9H682SJQ;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SecureBoard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SecureBoard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_SUEnableAutomaticChecks = YES;
+				INFOPLIST_KEY_SUEnableInstallerLauncherService = YES;
+				INFOPLIST_KEY_SUFeedURL = "https://example.com/secureboard/appcast.xml";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JackKroll.SecureBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -297,15 +336,33 @@
 				DEVELOPMENT_TEAM = ZS9H682SJQ;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SecureBoard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SecureBoard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_SUEnableAutomaticChecks = YES;
+				INFOPLIST_KEY_SUEnableInstallerLauncherService = YES;
+				INFOPLIST_KEY_SUFeedURL = "https://example.com/secureboard/appcast.xml";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JackKroll.SecureBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -342,6 +399,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		56E421AF2FEB3032006D3E4C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+		56E421D42FEDB672006D3E4C /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.3;
+			};
+		};
 		56EDFD1D2FD71D7D00B7EFF8 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
@@ -353,6 +426,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		56E421B02FEB3032006D3E4C /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56E421AF2FEB3032006D3E4C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+		56E421D52FEDB672006D3E4C /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56E421D42FEDB672006D3E4C /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 		56EDFD1E2FD71D7D00B7EFF8 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 56EDFD1D2FD71D7D00B7EFF8 /* XCRemoteSwiftPackageReference "keychain-swift" */;
