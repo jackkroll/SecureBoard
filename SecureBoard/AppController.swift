@@ -14,23 +14,26 @@ final class AppController: ObservableObject {
     @Published private(set) var isLaunchAtLoginEnabled = false
     @Published private(set) var launchAtLoginNeedsApproval = false
 
-    private var updaterController: SPUStandardUpdaterController?
+    private let updaterController: SPUStandardUpdaterController
 
-    private init() {}
+    var updater: SPUUpdater {
+        updaterController.updater
+    }
 
-    func configure() {
-        guard updaterController == nil else { return }
-
+    private init() {
         updaterController = SPUStandardUpdaterController(
             startingUpdater: true,
             updaterDelegate: nil,
             userDriverDelegate: nil
         )
+    }
+
+    func configure() {
         refreshLaunchAtLoginStatus()
     }
 
     func checkForUpdates() {
-        updaterController?.checkForUpdates(nil)
+        updaterController.checkForUpdates(nil)
     }
 
     func toggleLaunchAtLogin() {

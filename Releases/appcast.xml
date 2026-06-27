@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>SecureBoard</title>
+        <item>
+            <title>1.1</title>
+            <pubDate>Thu, 26 Jun 2026 19:49:10 -0400</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://jackk.dev/projects/secureboard/SecureBoard-2.dmg" length="3527282" type="application/octet-stream" sparkle:edSignature="JoBbaXC/Qv7FWsc6JcsXS+dmdp1Ajv0fC+f62uVTh6Z9/4ekj37fmSqc/f0cKSvARvsRr64fjEvgTk+DvtA+DQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://jackk.dev/projects/secureboard/SecureBoard2-1.delta" sparkle:deltaFrom="1" length="144406" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="975840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dFyvWmUNou/OeXw7N1J+4h+0afss9MPLMlR6z9KE7xccGBPNuf8U10MZBYEeoZwMh/M8ZZqq4A3BEMb1D9UkAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>1.0</title>
+            <pubDate>Thu, 25 Jun 2026 18:12:10 -0400</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://jackk.dev/projects/secureboard/SecureBoard-1.dmg" length="7020917" type="application/octet-stream" sparkle:edSignature="dSo/N+L2SmCMNKzsxnFowORarmP0STClqO1ITB6DwxSAwVgpOUEoj7wZDJOkvJOb8+zVEZWjINvV5x4gaOVXDw=="/>
+        </item>
+    </channel>
+</rss>

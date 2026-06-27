@@ -4,6 +4,10 @@
 <dict>
 	<key>SUFeedURL</key>
 	<string>https://jackk.dev/projects/secureboard/appcast.xml</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUEnableInstallerLauncherService</key>
+	<true/>
 	<key>SUPublicEDKey</key>
 	<string>iip2lEznbx084qyKLKIhzFTNXxBUFJobVN5QFk7p1Lg=</string>
 </dict>
